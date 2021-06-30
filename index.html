@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow-x: hidden;">
+<html lang="en">
 
 <head>
 
-     <title>GossiPP</title>
+     <title>Digital Trend HTML Template</title>
      <!--
 
 DIGITAL TREND
@@ -14,7 +14,7 @@ https://templatemo.com/tm-538-digital-trend
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
-      <meta name="theme-color" content="#057a8c" />
+     <meta name="theme-color" content="#0c8095" />
      <meta name="keywords" content="">
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -28,7 +28,9 @@ https://templatemo.com/tm-538-digital-trend
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-digital-trend.css">
-     <link rel="stylesheet" href="newstyle.css">
+     <!-- <link rel="stylesheet" href="newstyle.css">
+     <link rel="stylesheet" href="vavabar.css"> -->
+
 
 
 
@@ -68,12 +70,25 @@ https://templatemo.com/tm-538-digital-trend
           $(function () { start(); });
       </script>
     <style>
+         body{
+overflow-x: hidden;
+ background: rgb(255, 255, 255);
+ margin: 0;
+padding: 0;
+color: #212529;
+transition-duration: 0.6s;
+         }
+         .dark{
+filter: brightness(0.3);
+background: rgb(0, 0, 0);
+ margin: 0;
+padding: 0 -5px 0;
+         }
 .webcam {
      overflow: hidden;
     background: url(images/3d.png);
     border-radius: 50%;
-    background-position: center;
-    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    background-size: cover;
     height: 32vw;
     width: 32vw;
     display: flex;
@@ -87,8 +102,8 @@ https://templatemo.com/tm-538-digital-trend
     right: 0;
     display: flex;
     align-items: center;
-    flex-direction: row;
     justify-content: space-between;
+    flex-direction: row;
 }
 .webcam-start-stop > a {
      text-decoration: unset;
@@ -99,7 +114,7 @@ https://templatemo.com/tm-538-digital-trend
     width: 12%;
     align-items: center;
     display: flex;
-    
+
 }
 .row{
      justify-content: space-around;
@@ -107,7 +122,6 @@ https://templatemo.com/tm-538-digital-trend
 .btn-start{
      clip-path: circle(50% at 0% 50%);
     font-size: 1.4vw;
-    justify-content: center;
 }
 .btn-stop{
      clip-path: circle(50% at 100% 50%);
@@ -126,9 +140,8 @@ https://templatemo.com/tm-538-digital-trend
     flex-direction: column
 }
 .logomake{
-     position:absolute;
+     position: absolute;
      width: 26%;
-     z-index:1000;
      margin-top: -5%;
      margin-left: -4%;
 }
@@ -141,6 +154,7 @@ https://templatemo.com/tm-538-digital-trend
 }
 @media (max-width:609px){
 .logomake{
+     position: absolute;
     width: 32%;
     margin-top: -20px;
     margin-left: 5px;
@@ -148,6 +162,7 @@ https://templatemo.com/tm-538-digital-trend
 }
 @media (max-width:550px){
 .logomake{
+    position: absolute;
     width: 43%;
     margin-top: -20px;
     margin-left: 10px;
@@ -167,12 +182,11 @@ https://templatemo.com/tm-538-digital-trend
      margin: 28% 0 5% 0;
      }
      .webcam {
-     height: 40vh;
-     width: 40vh;
+     height: 45vh;
+     width: 45vh;
 }
 .webcam-start-stop > a {
-  font-size: 3vw;
-}
+     font-size: 2vw;
 }
 @media (max-width:383px){
      .web-box{
@@ -192,8 +206,15 @@ https://templatemo.com/tm-538-digital-trend
      width: 50vw;
 }
 }
-   </style>
+@media (max-width:991px){
+.navmake{
+    display:none !important;
+}}
+ </style>
 
+  
+
+     
 
 
 
@@ -205,23 +226,22 @@ https://templatemo.com/tm-538-digital-trend
 
 </head>
 
-<body style="overflow-x: hidden;background: #fff;margin:0;padding: 0;color: #212529;">
+<body>
 
      <!-- MENU BAR -->
      <nav class="navbar navbar-expand-lg" >
-          <div class="container">
+          <div class="container" style="overflow-x: hidden;">
 
-               <div class="logo" style="display: block;left: 0;top: 0;width: 31%;">
+               <div class="logo" style="display: block;left: 0;top: 0;width: 31%; z-index: 1000000;">
                     <a class="navbar-brand" href="index.html">
                          <img src="images/logo.png"  class="logomake" data-aos="zoom-in-right"  >
                     </a>
                </div>
 
-               <button class="navbar-toggler" data-aos="zoom-in-left" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <button class="navbar-toggler" data-aos="zoom-in-left" type="button" data-toggle="collapse" data-target=".navmake" >
                     <span class="navbar-toggler-icon"></span>
                </button>
-
+          <div class="navmake"></div>
                <div class="collapse navbar-collapse"  id="navbarNav">
                     <ul class="navbar-nav ml-auto" data-aos="zoom-in-left">
                          <li class="nav-item">
@@ -242,24 +262,24 @@ https://templatemo.com/tm-538-digital-trend
      </nav>
 
      <!-- HERO -->
-     <section class="hero hero-bg d-flex justify-content-center align-items-center" style="overflow-x: hidden;">
+     <section  class="hero hero-bg d-flex justify-content-center align-items-center">
           <div class="container">
                <div class="row">
 
-                    <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                    <div  class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                          <div class="hero-text" style="display: flex;align-items: flex-start;flex-direction: column;">
 
                               <h1 class="text-white" data-aos="fade-up">Introducing GossiPP</h1>
 
                               <strong class="d-block py-3 text-white" data-aos="fade-up" data-aos-delay="200">Video Chat + Friends + Dating Social Network</strong>
 
-                              <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up"
+                              <a  href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up"
                                    data-aos-delay="100">Login/Sign up</a>
                          </div>
                     </div>
 
                     <div class="web-box" >
-                         <div class="webcam" data-aos="fade-up" data-aos-delay="300">
+                         <div class="webcam" id="vanta-birds"  data-aos="fade-up" data-aos-delay="300">
                                    <div class="video-outer">
                                        <video id="video" height="100%" width="100%" autoplay></video>
                                    </div>
@@ -275,8 +295,82 @@ https://templatemo.com/tm-538-digital-trend
      </section>
 
 
+
+
+
+     <script>
+     const togglemenu=document.querySelector('.navbar-toggler');
+    const navigation=document.querySelector('.navmake');
+    const bodymake=document.querySelector('body');
+    togglemenu.onclick=function(){
+    navigation.classList.toggle('active');
+    togglemenu.classList.toggle('active');
+    bodymake.classList.toggle('dark');
+    };
+
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.dots.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.birds.min.js"></script>
+
+      <script type="text/javascript">
+     VANTA.DOTS({
+  el: "#vanta-dots",
+  mouseControls: false,
+  touchControls: false,
+  showLines: false,
+  gyroControls: false,
+  backgroundAlpha: 0,
+  minHeight: 50.00,
+  minWidth: 50.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x0,
+  color2:0x000000,
+  backgroundColor: 0xffffff,
+  size: 5.7,
+  spacing: 25.00,
+})
+</script>
+<script>
+VANTA.BIRDS({
+  el: "#vanta-birds",
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xffffff,
+  color1: 0x0,
+  color2: 0xffffff,
+  colorMode: "variance",
+  birdSize: 2.10,
+  wingSpan: 40.00,
+  speedLimit: 3.00,
+  separation: 58.00,
+  alignment: 100.00,
+  cohesion: 100.00,
+  quantity: 4.00,
+  backgroundAlpha: 0.00
+})
+</script>
      <!-- ABOUT -->
-     <section class="about section-padding pb-0" id="about" style="overflow-x: hidden;">
+     <section class="about section-padding pb-0" id="about">
           <div class="container">
                <div class="row">
 
@@ -323,7 +417,7 @@ https://templatemo.com/tm-538-digital-trend
 
 
      <!-- PROJECT -->
-     <section class="project section-padding" id="project" style="overflow-x: hidden;">
+     <section class="project section-padding" id="project">
           <div class="container-fluid">
                <div class="row">
 
@@ -422,7 +516,7 @@ https://templatemo.com/tm-538-digital-trend
           <div class="container">
                <div class="row">
 
-                    <div class="canvo" data-aos="fade-right" style="display:flex; flex-direction: row;">
+                    <div  class="canvo" data-aos="fade-right" style="display:flex; flex-direction: row;">
                          <div class="imageofdata"><img src="images/video-chat.png" class="img1" alt="website"
                                    style="width: 42%; margin-left: 25%;"></div>
                          <div class="data">
@@ -538,8 +632,8 @@ https://templatemo.com/tm-538-digital-trend
      </section>
 
 
-     <footer class="site-footer"  style="overflow-x: hidden;">
-          <div class="container">
+     <footer  class="site-footer"  >
+          <div  class="container">
                <div class="row">
 
                     <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12 flexmake">
@@ -603,6 +697,8 @@ https://templatemo.com/tm-538-digital-trend
 
 
      <!-- SCRIPTS -->
+     <script src="three.r119.min.js"></script>
+<script src="vanta.dots.min.js"></script>
      <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/aos.js"></script>
