@@ -14,9 +14,9 @@ https://templatemo.com/tm-538-digital-trend
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
-     <meta name="theme-color" content="#0c8095" />
+     <meta name="theme-color" content="#0c8095">
      <meta name="keywords" content="">
-     <meta name="author" content="">
+     <meta name="author" content="">  
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,8 +28,7 @@ https://templatemo.com/tm-538-digital-trend
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-digital-trend.css">
-     <!-- <link rel="stylesheet" href="newstyle.css">
-     <link rel="stylesheet" href="vavabar.css"> -->
+
 
 
 
@@ -69,6 +68,9 @@ https://templatemo.com/tm-538-digital-trend
           }
           $(function () { start(); });
       </script>
+
+
+
     <style>
          body{
 overflow-x: hidden;
@@ -76,21 +78,24 @@ overflow-x: hidden;
  margin: 0;
 padding: 0;
 color: #212529;
-transition-duration: 0.6s;
+transition: 0.5s;
          }
-         .dark{
-filter: brightness(0.3);
-background: rgb(0, 0, 0);
- margin: 0;
-padding: 0 -5px 0;
+         .scrolloff{
+     overflow: hidden !important;
+    padding-right: 14%;
+    margin-left: -15px;
+         }
+         .bright:not(#sidebarmake){
+              filter: brightness(0.4);
+              pointer-events: none;
          }
 .webcam {
      overflow: hidden;
     background: url(images/3d.png);
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    background-size: cover;
-    height: 32vw;
-    width: 32vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 31px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    background-size: cover;
+    height: 365px;
+    width: 365px;
     display: flex;
     align-items: center;
     justify-items: center;
@@ -111,21 +116,20 @@ padding: 0 -5px 0;
     font-family: cursive;
     background: #ddbb1c;
     height: 64%;
+    font-size: 15px;
     width: 12%;
     align-items: center;
     display: flex;
-
 }
 .row{
      justify-content: space-around;
 }
 .btn-start{
      clip-path: circle(50% at 0% 50%);
-    font-size: 1.4vw;
+    justify-content: center;
 }
 .btn-stop{
      clip-path: circle(50% at 100% 50%);
-    font-size: 1.5vw;
     justify-content: center;
 }
 .flexmake{
@@ -169,47 +173,23 @@ padding: 0 -5px 0;
              }
 }
 @media (max-width:991px){
-     .web-box{
-     margin: 28% 0 5% 0;
+          .web-box{
+    margin: 140px 0 40px 0;
+     }
+}
+@media (max-width:482px){
+          .web-box{
+     margin: 83px 0 0px 0;
      }
      .webcam {
-     height: 66vh;
-     width: 66vh;
-}
-}
-@media (max-width:523px){
-     .web-box{
-     margin: 28% 0 5% 0;
+          height: 76vw;
+    width: 76vw;
      }
-     .webcam {
-     height: 45vh;
-     width: 45vh;
+     .webcam-start-stop > a {
+     font-size: 3.4vw;
+     } 
 }
-.webcam-start-stop > a {
-     font-size: 2vw;
-}
-@media (max-width:383px){
-     .web-box{
-     margin: 28% 0 5% 0;
-     }
-     .webcam {
-     height: 50vw;
-     width: 50vw;
-}
-}
-@media (max-width:315px){
-     .web-box{
-     margin: 26% 0 5% 0;
-     }
-     .webcam {
-     height: 50vw;
-     width: 50vw;
-}
-}
-@media (max-width:991px){
-.navmake{
-    display:none !important;
-}}
+
  </style>
 
   
@@ -228,8 +208,31 @@ padding: 0 -5px 0;
 
 <body>
 
+
+
+
+
+
+     <!-- mobile -->
+     <div id="sidebarmake">
+                    <ul>
+                         <li>
+                              <a href="#about" class="smoothScroll">Studio</a>
+                         </li>
+                         <li>
+                              <a href="#project" class="smoothScroll">Our Works</a>
+                         </li>
+                         <li>
+                              <a href="blog.html" >Blog</a>
+                         </li>
+                         <li>
+                              <a href="contact.html" class="contact">Contact</a>
+                         </li>
+                    </ul>
+               </div>
+
      <!-- MENU BAR -->
-     <nav class="navbar navbar-expand-lg" >
+     <nav id="navbrightdecrease" class="navbar navbar-expand-lg">
           <div class="container" style="overflow-x: hidden;">
 
                <div class="logo" style="display: block;left: 0;top: 0;width: 31%; z-index: 1000000;">
@@ -238,11 +241,13 @@ padding: 0 -5px 0;
                     </a>
                </div>
 
-               <button class="navbar-toggler" data-aos="zoom-in-left" type="button" data-toggle="collapse" data-target=".navmake" >
-                    <span class="navbar-toggler-icon"></span>
+               <button id="buttonfor" class="navbar-toggler" data-aos="zoom-in-left" type="button"  >
+                    <div id="buttonfor1" class="navbar-toggler-icon"></div>
                </button>
-          <div class="navmake"></div>
-               <div class="collapse navbar-collapse"  id="navbarNav">
+      
+<!-- disktop -->
+
+               <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto" data-aos="zoom-in-left">
                          <li class="nav-item">
                               <a href="#about" class="nav-link smoothScroll">Studio</a>
@@ -258,11 +263,15 @@ padding: 0 -5px 0;
                          </li>
                     </ul>
                </div>
+
+              
+
+
           </div>
      </nav>
 
      <!-- HERO -->
-     <section  class="hero hero-bg d-flex justify-content-center align-items-center">
+     <section id="sectionbrightdecrease" class="hero hero-bg d-flex justify-content-center align-items-center">
           <div class="container">
                <div class="row">
 
@@ -299,13 +308,30 @@ padding: 0 -5px 0;
 
 
      <script>
-     const togglemenu=document.querySelector('.navbar-toggler');
-    const navigation=document.querySelector('.navmake');
-    const bodymake=document.querySelector('body');
+     const togglemenu=document.querySelector('#buttonfor');
+     const sidebarmake=document.querySelector('#sidebarmake');
+     const getbody=document.querySelector('body');
+     const nevbar=document.querySelector('#navbrightdecrease');
+     const hero=document.querySelector('#sectionbrightdecrease');
+
+
+document.onclick = function(e){
+     if(e.target.id !== 'buttonfor' && e.target.id !== 'sidebarmake' && e.target.id !== 'buttonfor1'){
+     togglemenu.classList.remove('active');
+     sidebarmake.classList.remove('active');
+     getbody.classList.remove('scrolloff');
+     nevbar.classList.remove('bright');
+    hero.classList.remove('bright');
+     }
+}
+
+
     togglemenu.onclick=function(){
-    navigation.classList.toggle('active');
     togglemenu.classList.toggle('active');
-    bodymake.classList.toggle('dark');
+    sidebarmake.classList.toggle('active');
+    getbody.classList.toggle('scrolloff');
+    nevbar.classList.toggle('bright');
+    hero.classList.toggle('bright');
     };
 
    </script>
@@ -362,7 +388,7 @@ VANTA.BIRDS({
   birdSize: 2.10,
   wingSpan: 40.00,
   speedLimit: 3.00,
-  separation: 58.00,
+  separation: 60.00,
   alignment: 100.00,
   cohesion: 100.00,
   quantity: 4.00,
@@ -697,6 +723,7 @@ VANTA.BIRDS({
 
 
      <!-- SCRIPTS -->
+
      <script src="three.r119.min.js"></script>
 <script src="vanta.dots.min.js"></script>
      <script src="js/jquery.min.js"></script>

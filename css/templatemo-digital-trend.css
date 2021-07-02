@@ -63,8 +63,48 @@ https://templatemo.com/tm-538-digital-trend
     background: var(--white-color);
     font-family: var(--base-font-family);
   }
-
-
+  
+  #sidebarmake{
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    right:-62vw;
+    width: 62vw;
+    height: 100vh;
+    background-color:rgb(5 122 141);
+    transition: 0.5s;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#sidebarmake ul{
+  position: relative;
+  margin-left: -3%;
+} 
+#sidebarmake ul li{
+  list-style-type: none;
+  display: inline-block;
+  width: 78%;
+  border-radius: 6px;
+  padding: 11px 34px;
+} 
+#sidebarmake ul li:hover {
+  background-color: #404040;
+}
+#sidebarmake ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+@media (max-width:991px){
+  #sidebarmake{
+    display: flex;
+  }
+}
+#sidebarmake.active{
+  right:0;
+}
   /*---------------------------------------
      TYPOGRAPHY              
   -----------------------------------------*/
@@ -223,6 +263,7 @@ https://templatemo.com/tm-538-digital-trend
   .navbar {
     background: var(--menu-bg);
     z-index: 2;
+    transition: 0.5s;
     top: 0;
     right: 0;
     left: 0;
@@ -349,6 +390,7 @@ https://templatemo.com/tm-538-digital-trend
 
   .hero-bg {
     background: linear-gradient(170deg, var(--primary-color) 64%, var(--white-color) 30%);
+    transition: 0.5s;
   }
 
   .hero-image {
@@ -708,3 +750,35 @@ https://templatemo.com/tm-538-digital-trend
   }
 
 
+
+.content{
+  display: none;
+}
+
+  .loader{
+    height: 100vh;
+    width: 100vw;
+    /* z-index: 10000000; */
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+  }
+  .loader > div{
+    height: 150px;
+    width: 150px;
+    border: 20px solid #45474b;
+    border-top-color: #2a88e6;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  @keyframes spin{
+    100%{
+      transform: rotate(360deg);
+    }
+  }
